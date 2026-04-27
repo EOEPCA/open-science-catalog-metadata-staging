@@ -2,7 +2,7 @@
   "type": "Collection",
   "id": "ice-sheet-temperature-antarctica-cryosmos",
   "stac_version": "1.0.0",
-  "description": "The product provides an estimate of the Ice Thickness in an area of East Antarctica where the BEDMAP2 data has an uncertainty of 1000 m. The product consists of a NETCDF file containing data in SMOS L3 format. The spatial coverage is provided as an index map in SMOS L3 coordinates. Both ice thickness estimate as well as ice thickness estimate merged onto the surrounding BEDMAP2 ice thickness data, are proved as maps. For user convenience the latitude and longitude coordinate values are also provided. The filename is Ã¢â¬ÅSMOS_IceThickness_YYYY_vvv.ncÃ¢â¬Â, where YYYY is the year and vvv is the version number. File size is approximately 7 Mbyte. Only year 2015 version 300 is currently provided. Product details are available at: http://www.ifac.cnr.it/cryosmos/products/CryoSMOS_D8_EDUM_V2.0.pdf. The data are freely disseminated, however the use of this data set must be cited as: Macelloni G., M. Brogioni, G. Picard and M. Leduc-Leballeur. 2019. SMOS Internal ice-sheet temperature, Version 2. [Indicate subset used]. Ã¢â¬ÅCryosmos. STSE SMOS+CryosphereÃ¢â¬Â. ESA contract No.4000112262/14/I-NB.",
+  "description": "This dataset provides ice temperature profiles in Antarctica derived from SMOS observations, along with the associated quality flag. The retrieval is based on a minimization between observed and simulated brightness temperatures. The snow and ice emission model uses as input ice temperature profiles simulated with the one-dimensional ice sheet model from Robin (1955). The Robin model takes as inputs ice thickness, surface temperature, geothermal heat flux, and mean annual accumulation, and allows estimation of ice temperature where ice velocity is lower than 10 m yr-1. The methodology is described in Macelloni et al. 2019 (https://doi.org/10.1016/j.rse.2019.111405). The dataset is static, as internal ice sheet temperature is not expected to change on a centennial timescale. It is georeferenced on the EASEGrid2 projection (EPSG:6932) with a spatial resolution of 25 m x 25 km and is available at: https://data.catds.fr/cecsm/Cryo_products/IceSheet_InternalTemperature.",
   "links": [
     {
       "rel": "root",
@@ -12,7 +12,7 @@
     },
     {
       "rel": "via",
-      "href": "http://www.ifac.cnr.it/cryosmos/products/SM_TEST_MIR_ITUDP4_20130101T000000_20141231T000000_200_001_0.nc",
+      "href": "https://data.catds.fr/cecsm/Cryo_products/IceSheet_InternalTemperature/SM_TEST_MIR_ITUDP4_20130101T000000_20141231T000000_200_001_0.nc",
       "title": "Access"
     },
     {
@@ -51,8 +51,6 @@
   ],
   "osc:region": "Antarctica",
   "created": "2020-03-19T00:00:00Z",
-  "start_datetime": "2013-01-01T00:00:00Z",
-  "end_datetime": "2014-12-31T23:59:59Z",
   "sci:doi": "10.1016/j.rse.2019.111405",
   "extent": {
     "spatial": {
@@ -68,15 +66,14 @@
     "temporal": {
       "interval": [
         [
-          "2013-01-01T00:00:00Z",
-          "2014-12-31T23:59:59Z"
+          null,
+          null
         ]
       ]
     }
   },
   "license": "proprietary",
   "keywords": [
-    "Sea Ice",
     "Ice Temperature"
   ]
 }
